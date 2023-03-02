@@ -1,0 +1,27 @@
+{
+  "info": {
+    "analysis_tools": [
+      "GATK:CalculateContamination"
+    ],
+    "data_category": "Quality Control Metrics",
+    "data_subtype": [
+      "Cross Sample Contamination"
+    ],
+    "description": "Cross sample contamination estimated by GATK CalculateContamination tool",
+    "files_in_tgz": [
+      "f2091fa16afed80801c0ed62d1043e01.tumour.contamination_metrics",
+      "f2091fa16afed80801c0ed62d1043e01.tumour.segmentation_metrics",
+      "tumour_contamination.extra_info.json"
+    ],
+    "metrics": {}
+  },
+  "objectId": "57b0f238-2300-55bd-9465-e747dcdbb09a",
+  "studyId": "TEST-PR",
+  "analysisId": "939b4923-bc7e-4e8b-9b49-23bc7e3e8b58",
+  "fileName": "TEST-PR.DO250183.SA610229.wxs.20210324.gatk-mutect2.somatic.contamination_metrics.tgz",
+  "fileSize": 504,
+  "fileType": "TGZ",
+  "fileMd5sum": "afa3b27de48116478b45e1062d9bf645",
+  "fileAccess": "controlled",
+  "dataType": "Sample QC"
+}
