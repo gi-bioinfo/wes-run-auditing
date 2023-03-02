@@ -36,7 +36,7 @@ def main():
     parser.add_argument('-p', '--project', dest="project", help="projects to query",type=str,nargs="+",default=['all'])
     parser.add_argument('-u', '--url', dest="song_url", help="SONG", required=True,type=str)
     parser.add_argument('-o', '--output_directory', dest="out_dir", help="Output Directory", default=os.getcwd(),type=str)
-    parser.add_argument('-s', '--state', dest="state", help="analysis state to query",default=["UNPUBLISHED","SUPPRESSED"],choices=["UNPUBLISHED","SUPPRESSED"],nargs="+")
+    parser.add_argument('-s', '--state', dest="state", help="analysis state to query",default=["UNPUBLISHED","SUPPRESSED"],choices=["PUBLISHED","UNPUBLISHED","SUPPRESSED"],nargs="+")
 
     cli_input= parser.parse_args()
 
@@ -109,6 +109,8 @@ def querySong(song_url,study,state,objects_to_remove):
                 objects_to_remove.loc[count,"objectId"]=file["objectId"]
                 objects_to_remove.loc[count,"analysisId"]=analysis['analysisId']
                 objects_to_remove.loc[count,"studyId"]=analysis['studyId']
+                objects_to_remove.loc[count,"analysisVersion"]=analysis['analysisType']['version']
+                objects_to_remove.loc[count,"analysisType"]=analysis['analysisType']['name']
                 objects_to_remove.loc[count,"analysisState"]=analysis['analysisState']
     
     return objects_to_remove

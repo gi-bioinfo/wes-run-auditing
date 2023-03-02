@@ -127,3 +127,4 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+outputs/objects_with_metrics_to_hide.tsv.gz
